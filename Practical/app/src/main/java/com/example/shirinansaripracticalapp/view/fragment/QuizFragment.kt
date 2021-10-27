@@ -17,7 +17,7 @@ import kotlin.collections.ArrayList
 
 class QuizFragment : BaseFragment<FragmentQuizBinding>(), View.OnClickListener {
 
-    private var totalQue = 2
+    private var totalQue = 30
     private var queNo = 1
 
     private val min = 0
