@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ShirinAnsariPracticalApp</string>
+
+    <string name="str_start">Start</string>
+    <string name="str_questions">Questions</string>
+    <string name="str_result">Result</string>
+    <string name="str_score">Score</string>
+    <string name="str_done">Done</string>
+    <string name="str_que_no">Question No.</string>
+    <string name="str_answer">Answer</string>
+    <string name="str_right_wrong">Right/Wrong</string>
+    <string name="str_right">Right</string>
+    <string name="str_wrong">Wrong</string>
+
+</resources>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clMainQuiz"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.activity.MainActivity">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_toolbar" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvQueNo"
+            style="@style/fontStyleRegular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:gravity="center"
+            android:text="@string/str_que_no"
+            android:textAppearance="?attr/textAppearanceBody1"
+            app:layout_constraintEnd_toStartOf="@+id/tvAnswer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAnswer"
+            style="@style/fontStyleRegular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:gravity="center"
+            android:text="@string/str_answer"
+            android:textAppearance="?attr/textAppearanceBody1"
+            app:layout_constraintEnd_toStartOf="@+id/tvCorrect"
+            app:layout_constraintStart_toEndOf="@+id/tvQueNo"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCorrect"
+            style="@style/fontStyleRegular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:gravity="center"
+            android:text="@string/str_right_wrong"
+            android:textAppearance="?attr/textAppearanceBody1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvAnswer"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <View
+            android:id="@+id/vDividerHeader"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCorrect" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvResult"
+            style="@style/fontStyleRegular"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/vDivider1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vDividerHeader"
+            tools:listitem="@layout/row_question" />
+
+        <View
+            android:id="@+id/vDivider1"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rvResult" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvQuestionNo"
+            style="@style/fontStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_40sdp"
+            android:layout_marginLeft="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_30sdp"
+            android:text="@string/str_score"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vDivider1" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMarks"
+            style="@style/fontStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_40sdp"
+            android:layout_marginBottom="@dimen/_30sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vDivider1"
+            tools:text="15/30" />
+
+        <View
+            android:id="@+id/vDivider2"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvMarks" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDone"
+            style="@style/fontStyleLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/_15sdp"
+            android:text="@string/str_done"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vDivider2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+

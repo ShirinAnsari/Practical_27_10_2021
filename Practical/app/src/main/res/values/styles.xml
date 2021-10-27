@@ -1,0 +1,36 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--Text Style-->
+    <style name="fontStyleLarge">
+        <item name="android:textAppearance">?attr/textAppearanceBody2</item>
+        <item name="android:textSize">@dimen/_22sdp</item>
+    </style>
+
+    <style name="fontStyleLargeBold" parent="fontStyleLarge">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="fontStyleExtraLarge">
+        <item name="android:textAppearance">?attr/textAppearanceBody1</item>
+        <item name="android:textSize">@dimen/_46sdp</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="fontStyleRegular">
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:textAppearance">?attr/textAppearanceBody1</item>
+    </style>
+    <style name="fontStyleRegularBold" parent="fontStyleRegular">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="fontStyleSmall">
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:textAppearance">?attr/textAppearanceBody1</item>
+    </style>
+
+
+    <!--Button Style-->
+    <style name="buttonStyle" parent="android:style/Widget.Button">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/bg_button</item>
+    </style>
+</resources>

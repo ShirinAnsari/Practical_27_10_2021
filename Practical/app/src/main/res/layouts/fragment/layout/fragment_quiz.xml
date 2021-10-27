@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+        <variable
+            name="quizViewModel"
+            type="com.example.shirinansaripracticalapp.viewmodel.QuizViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clMainQuiz"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.activity.MainActivity">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_toolbar" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDigitOne"
+            style="@style/fontStyleRegular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_80sdp"
+            android:background="@drawable/border"
+            app:layout_constraintEnd_toStartOf="@+id/tvOperator"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            tools:text="0" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOperator"
+            style="@style/fontStyleLargeBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvDigitOne"
+            app:layout_constraintEnd_toStartOf="@+id/tvDigitTwo"
+            app:layout_constraintStart_toEndOf="@+id/tvDigitOne"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            tools:text="+" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDigitTwo"
+            style="@style/fontStyleRegular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvDigitOne"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvOperator"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            tools:text="0" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOptionOne"
+            style="@style/fontStyleRegular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:background="@drawable/option_selector"
+            app:layout_constraintEnd_toStartOf="@+id/tvOptionTwo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDigitOne"
+            tools:text="0" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOptionTwo"
+            style="@style/fontStyleRegular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/option_selector"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvOptionOne"
+            app:layout_constraintEnd_toStartOf="@+id/tvOptionThree"
+            app:layout_constraintStart_toEndOf="@+id/tvOptionOne"
+            app:layout_constraintTop_toBottomOf="@+id/tvDigitOne"
+            tools:text="0" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOptionThree"
+            style="@style/fontStyleRegular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/option_selector"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvOptionOne"
+            app:layout_constraintEnd_toStartOf="@+id/tvOptionFour"
+            app:layout_constraintStart_toEndOf="@+id/tvOptionTwo"
+            app:layout_constraintTop_toBottomOf="@+id/tvDigitOne"
+            tools:text="0" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOptionFour"
+            style="@style/fontStyleRegular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/option_selector"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvOptionOne"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvOptionThree"
+            app:layout_constraintTop_toBottomOf="@+id/tvDigitOne"
+            tools:text="0" />
+
+        <View
+            android:id="@+id/vDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/tvQuestionNo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvQuestionNo"
+            style="@style/fontStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_40sdp"
+            android:layout_marginLeft="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vDivider"
+            tools:text="Q. 1" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSec"
+            style="@style/fontStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_40sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vDivider"
+            tools:text="30 sec" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+
